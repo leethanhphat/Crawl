@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển Video YouTube bằng API</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Thêm thư viện YouTube Iframe API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <h1>Chuyển Video YouTube bằng API</h1>
+
+    <!-- Khu vực nhúng video chính -->
+    <div class="video-container">
+        <div id="player"></div>
+    </div>
+
+    <!-- Hiển thị thông tin video -->
+    <div class="video-info">
+        <h2 id="video-title" class="loading">Đang tải tiêu đề...</h2>
+        <p id="view-count" class="loading">Đang tải số lượt xem...</p>
+        <p id="like-count" class="loading">Đang tải số lượt thích...</p>
+    </div>
+
+    <!-- Phần mở rộng chọn video mới -->
+    <div id="video-selection" class="video-list" style="display: none;">
+        <!-- Các video liên quan sẽ được hiển thị tại đây -->
+    </div>
+
+    <script src="scripts_v3.js"></script>
+</body>
+</html>

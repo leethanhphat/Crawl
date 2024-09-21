@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển Video YouTube bằng API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .video-container {
+            max-width: 100%;
+            width: 560px;
+            margin: 0 auto;
+        }
+        iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+        .video-info {
+            margin-top: 20px;
+            text-align: left;
+            max-width: 560px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .video-list {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .video-list button {
+            margin: 0 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .loading {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chuyển Video YouTube bằng API</h1>
+
+    <!-- Khu vực nhúng video chính -->
+    <div class="video-container">
+        <iframe id="youtube-embed" src="https://www.youtube.com/embed/tkC42vd9hSQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Hiển thị thông tin video -->
+    <div class="video-info">
+        <h2 id="video-title" class="loading">Đang tải tiêu đề...</h2>
+        <p id="view-count" class="loading">Đang tải số lượt xem...</p>
+        <p id="like-count" class="loading">Đang tải số lượt thích...</p>
+    </div>
+
+    <!-- Danh sách các nút để chọn video -->
+    <div class="video-list">
+        <button onclick="loadVideo('tkC42vd9hSQ')">Video 1</button>
+        <button onclick="loadVideo('JGwWNGJdvx8')">Video 2</button>
+        <button onclick="loadVideo('hY7m5jjJ9mM')">Video 3</button>
+    </div>
+
+    <!-- Kết nối file JavaScript -->
+    <script src="script_v2.js"></script>
+</body>
+</html>
